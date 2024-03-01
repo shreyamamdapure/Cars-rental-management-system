@@ -1,0 +1,26 @@
+Add new car: REQ-001-001
+This will adda new car to the companies total owned cars list.
+
+Remove exisiting car: 
+
+
+Class CarManagement
+//string Make: this descripbes the make of the car
+//string mdel: 
+// returns true / false depen
+	return Add new car(sring Mke, string model, string regno)
+
+
+1. Manage car
+2. Manage subs
+3. Manage rent
+4. Reports
+ENter your choice:2
+2.1Add Sub
+2.2 Remo sub
+2.3 Exir to prev menu
+ENter your choice:1
+Enter your name:
+Addre
+
+	
