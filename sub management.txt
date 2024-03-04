@@ -13,26 +13,27 @@ int maxcars; \\ describes max cars they can rent.
 double discount; \\ describes discount percentage they can get based on subscription level 
 
  
+class carrent
 
-Adding subscribers: REQ-002-001
+a)Adding subscribers: REQ-002-001
 
 This will add a new subscriber  
-void addsub(string name,Subscriptionlevel level) 
+-void addsub(string name,Subscriptionlevel level) 
 
 Adding switch function for subscription level: Silver, Gold, Platinum 
 
  
 
-Removing subscribers: REQ-002-002
-void removesub(string name) 
+b)Removing subscribers: REQ-002-002
+-void removesub(string name) 
 
 Takes the name of subscriber as input and remove it 
 
  
 
-Promoting subscription level: REQ-002-003
+c)Promoting subscription level: REQ-002-003
 
-Void promoteSub(string name, Subscriptionlevel newlevel) 
+-Void promoteSub(string name, Subscriptionlevel newlevel) 
 
 Subscriptionlevel newlevel: describes the promoted subscription level user chooses 
 
@@ -45,7 +46,7 @@ While(true){
 Menu: 1.Add a subscriber
 2.Remove a subscriber
 3.Promote subscription level.
-
+4.Exit
  
 
  
