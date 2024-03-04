@@ -1,0 +1,55 @@
+Subscriber management: REQ-002
+
+ 
+
+class subscriber: 
+
+string name;   \\ This describes Name of subscriber 
+
+Subscriptionlevel Level; \\ Describes Level of subscription Silver,gold or platinum. 
+
+int maxcars; \\ describes max cars they can rent. 
+
+double discount; \\ describes discount percentage they can get based on subscription level 
+
+ 
+
+Adding subscribers: REQ-002-001
+
+This will add a new subscriber  
+void addsub(string name,Subscriptionlevel level) 
+
+Adding switch function for subscription level: Silver, Gold, Platinum 
+
+ 
+
+Removing subscribers: REQ-002-002
+void removesub(string name) 
+
+Takes the name of subscriber as input and remove it 
+
+ 
+
+Promoting subscription level: REQ-002-003
+
+Void promoteSub(string name, Subscriptionlevel newlevel) 
+
+Subscriptionlevel newlevel: describes the promoted subscription level user chooses 
+
+Int main() 
+
+CarRent rentalSystem: An instance of class carRent is created 
+
+While(true){ 
+
+Menu: 1.Add a subscriber
+2.Remove a subscriber
+3.Promote subscription level.
+
+ 
+
+ 
+
+  
+
+ 
