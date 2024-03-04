@@ -2,9 +2,9 @@ Car Management:Req-001
         a) Adding a Car :REQ-001-001
            This will add a new car to company 
            void addCar(vector<Car> &cars)
-           \\Take input from user i.e. brand,model,registrationNumber
+           Take input from user i.e. brand,model,registrationNumber
         b) Removing a Car : REQ-001-002
-           \\This will remove a car from the company 
+           This will remove a car from the company 
            void removeCar(vector<Car>& carList)
            string registrationNumber;//this will denote the reg no of car which we want to remove
 
@@ -13,9 +13,9 @@ Subscriber management: REQ-002
           This will add a new subscriber 
           void addsub(string name,Subscriptionlevel level) 
           this will take name name of subscriber and level of subscription 
-          subscription levels: 0 for Silver having 0 % discount, 
-                               1 for Gold having 10 % discount, 
-                               2 for platinum having 20 % discount.
+          subscription levels: 0 for Silver having 0 % discount & maxcar 1, 
+                               1 for Gold having 10 % discount & maxcar 2, 
+                               2 for platinum having 20 % discount & maxcar 3.
         b)Removing subscribers: REQ-002-002
            void removesub(string name) 
            Takes the name of subscriber as input and remove it 
