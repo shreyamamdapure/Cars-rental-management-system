@@ -13,7 +13,7 @@ int maxcars; \\ describes max cars they can rent.
 double discount; \\ describes discount percentage they can get based on subscription level 
 
  
-class carrent
+class carRent
 
 a)Adding subscribers: REQ-002-001
 
