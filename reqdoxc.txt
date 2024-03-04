@@ -1,3 +1,22 @@
+Car Management:Req-001
+
+class car:
+string brand \\ This describes the brand of car
+string model\\ This describes the model of car
+string registrationNumber\\This describes the Reg no of a car
+
+a) Adding a Car :REQ-001-001
+This will add a new car
+void addCar(vector<Car> &cars)
+\\Take input from user i.e. brand,model,registrationNumber.
+
+b) Removing a Car : REQ-001-002
+\\This will remove a car 
+
+void removeCar(vector<Car>& carList)
+string registrationNumber;//this will denote the reg no of car which we want to remove
+
+
 Subscriber management: REQ-002
 
  
