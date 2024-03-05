@@ -1,0 +1,54 @@
+1.Car Management:Req-001
+        a) Adding a Car :REQ-001-001
+           This will add a new car to company
+           Take input from user i.e. brand,model,registrationNumber
+
+        b) Removing a Car : REQ-001-002
+           This will remove a car from the company    
+           string registrationNumber;//this will denote the reg no of car which we want to remove
+ 
+2.Subscriber management: REQ-002
+        a)Adding subscribers: REQ-002-001
+          This will add a new subscriber 
+          this will take name name of subscriber, subscriber id and level of subscription 
+          subscription levels: 0 for Silver having 0 % discount & maxcar 1, 
+                               1 for Gold having 10 % discount & maxcar 2, 
+                               2 for platinum having 20 % discount & maxcar 3.
+        b)Removing subscribers: REQ-002-002
+            
+           Takes the id of subscriber as input and remove it 
+        c)Promoting subscription level: REQ-002-003
+             
+            takes id of subscriber and change its subscription level choosen by subsriber(gold,silver,platinum)
+            Subscriptionlevel newlevel: describes the promoted subscription level user chooses 
+3.Manage Subscription:REQ-003
+    a)Rent a car:   //REQ-003-001
+        The customer can rent a car from the availale list of cars.
+        Take subscription Id as input.
+ 
+    b)Return a car: //REQ-003-002
+        The customer can return a car after renting a car.
+        Take car name and subscription id as input.
+ 
+    c)Extend the Renatl period:  //REQ-003-003
+        If the customer wants to extend the rental period of the car,he can do it.
+        Take car name and subscription id as input.
+ 
+    d) Return to main menu:  //REQ-003-004
+ 
+4.Reports:REQ-004
+    a) See available cars list:  //REQ-004-001
+          The manager can see the list of cars that are available.
+    b) See cars under rental now:  //REQ-004-002
+          The manager can see the list of all the cars that are under rent.
+ 
+    c) See the subscribers list:  //REQ-004-003
+          The manager car see the currently rented subscribers list of users.
+    d) See curent subscription book: //REQ-004-004
+          The manager can see the entire list of subscribers.
+    e) See the revenue so far:  //REQ-004-005
+          The manager car see the  total revenue so far.
+ 
+    f) Return to main menu:  //REQ-004-006
+          Return to the main menu.
+ 
