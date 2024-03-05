@@ -8,7 +8,7 @@
            void removeCar(vector<Car>& carList)
            string registrationNumber;//this will denote the reg no of car which we want to remove
 
-2.Subscriber management: REQ-002
+2.Subscriber Management: REQ-002
         a)Adding subscribers: REQ-002-001
           This will add a new subscriber 
           void addsub(string name,Subscriptionlevel level) 
@@ -23,7 +23,7 @@
             Void promoteSub(string name, Subscriptionlevel newlevel) 
             takes name of subscriber and change its subscription level choosen by subsriber(gold,silver,platinum)
             Subscriptionlevel newlevel: describes the promoted subscription level user chooses 
-3.Manage Subscription:REQ-003
+3.Subsciption Management:REQ-003
    
     a)Rent a car:   //REQ-003-001
         The customer can rent a car from the availale list of cars.
