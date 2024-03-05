@@ -19,7 +19,7 @@ Methods:
        -It takes a reference to a vector of Car objects (carList) as its parameter.
        -registrationNumber(string)-this takes reg no of car that should have to be remove from the company .
 
-*Manage Subscription*
+*Manage Subscriber*
 Classes:  
 
 1. Subscriber: 
@@ -64,30 +64,3 @@ Classes:
 
  
 
-1. Adding a Subscriber: 
-
-   - Choose option 1 from the menu.  
-
-   - Enter the subscriber's name.  
-
-   - Enter the subscription level (0 for Silver, 1 for Gold, 2 for Platinum).  
-
-2. Removing a Subscriber: 
-
-   - Choose option 2 from the menu.  
-
-   - Enter the name of the subscriber to remove.  
-
-3. Promoting Subscription Level: 
-
-   - Choose option 3 from the menu.  
-
-   - Enter the name of the subscriber to promote.  
-
-   - Enter the new subscription level (0 for Silver, 1 for Gold, 2 for Platinum).  
-
-4. Exiting the System: 
-
-   - Choose option 4 from the menu to exit the system. 
-
- 
