@@ -24,12 +24,15 @@
 3.Manage Subscription:REQ-003
     a)Rent a car:   //REQ-003-001
         The customer can rent a car from the availale list of cars.
+        Take subscription Id as input.
  
     b)Return a car: //REQ-003-002
         The customer can return a car after renting a car.
+        Take car name and subscription id as input.
  
     c)Extend the Renatl period:  //REQ-003-003
         If the customer wants to extend the rental period of the car,he can do it.
+        Take car name and subscription id as input.
  
     d) Return to main menu:  //REQ-003-004
  
