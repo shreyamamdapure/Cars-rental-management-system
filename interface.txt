@@ -1,4 +1,19 @@
- Classes:  
+class car:
+       this is the class represents a car in the company 
+Attributes:
+   Brand (string): brand of car that should be added in company.
+   model(string):  model of car that should be added in company 
+   registrationNumber(string): registration no of car that should be added in company 
+Methods:
+ void addCar(vector<Car> &cars)
+     vector to store the information of car.
+     take input from user using attributes defined in class.
+  void removeCar(vector<Car>& carList) 
+       removing a car from the list of cars in the car rental management system. 
+      It takes a reference to a vector of Car objects (carList) as its parameter.
+      registrationNumber(string)-this takes reg no of car that should have to be remove from the company .
+
+Classes:  
 
 1. Subscriber: 
 
