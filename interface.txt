@@ -1,3 +1,5 @@
+*Car Management*
+
 class car:
 
       -this is the class represents a car in the company 
@@ -17,6 +19,7 @@ Methods:
        -It takes a reference to a vector of Car objects (carList) as its parameter.
        -registrationNumber(string)-this takes reg no of car that should have to be remove from the company .
 
+*Subscription Management*
 Classes:  
 
 1. Subscriber: 
