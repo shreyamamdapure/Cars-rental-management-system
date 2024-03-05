@@ -27,6 +27,7 @@ Classes:
    - Attributes: 
 
      - name (string): Name of the subscriber.  
+     -id(string) : Id of the subscriber.
 
      - level  (SubscriptionLevel): Current subscription level of the subscriber.  
 
@@ -37,7 +38,7 @@ Classes:
    - Methods: 
 
      - getName() const: Returns the name of the subscriber.  
-
+     -getID() const : Returns the id of the subscriber.
      - getLevel() const: Returns the subscription level of the subscriber.  
 
      - getMaxCars() const : Returns the maximum number of cars the subscriber can rent.  
@@ -54,11 +55,11 @@ Classes:
 
    - Methods: 
 
-     - addSubscriber(string name, SubscriptionLevel level): Adds a new subscriber with the specified name and subscription level.  
+     - addSubscriber(string name, string id,SubscriptionLevel level): Adds a new subscriber with the specified name,id and subscription level.  
 
-     - removeSubscriber(string name): Removes the subscriber with the specified name from the system.  
+     - removeSubscriber(string id): Removes the subscriber with the specified name from the system.  
 
-     -promoteSubscriber(string name, int newLevel): Promotes the subscription level of the subscriber with the specified name.  
+     -promoteSubscriber(string id, int newLevel): Promotes the subscription level of the subscriber with the specified name.  
 
      - levelToString(SubscriptionLevel level): Helper method to convert SubscriptionLevel enum to string.  
 "main.cpp file"
