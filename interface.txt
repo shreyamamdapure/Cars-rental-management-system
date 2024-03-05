@@ -1,0 +1,71 @@
+ Classes:  
+
+1. Subscriber: 
+
+   - Attributes: 
+
+     - name (string): Name of the subscriber.  
+
+     - level  (SubscriptionLevel): Current subscription level of the subscriber.  
+
+     - maxCars (int): Maximum number of cars the subscriber can rent simultaneously.  
+
+     - discount (double): Discount percentage applicable to the subscriber.  
+
+   - Methods: 
+
+     - getName() const: Returns the name of the subscriber.  
+
+     - getLevel() const: Returns the subscription level of the subscriber.  
+
+     - getMaxCars() const : Returns the maximum number of cars the subscriber can rent.  
+
+     - getDiscount() const : Returns the discount percentage applicable to the subscriber.  
+
+     - setLevel(SubscriptionLevel newLevel)  : Sets the subscription level of the subscriber.  
+
+2. CarRentalSystem: 
+
+   - Attributes: 
+
+     - subscribers (vector<Subscriber>): Vector to store all subscribers.  
+
+   - Methods: 
+
+     - addSubscriber(string name, SubscriptionLevel level): Adds a new subscriber with the specified name and subscription level.  
+
+     - removeSubscriber(string name): Removes the subscriber with the specified name from the system.  
+
+     -promoteSubscriber(string name, int newLevel): Promotes the subscription level of the subscriber with the specified name.  
+
+     - levelToString(SubscriptionLevel level): Helper method to convert SubscriptionLevel enum to string.  
+
+ 
+
+1. Adding a Subscriber: 
+
+   - Choose option 1 from the menu.  
+
+   - Enter the subscriber's name.  
+
+   - Enter the subscription level (0 for Silver, 1 for Gold, 2 for Platinum).  
+
+2. Removing a Subscriber: 
+
+   - Choose option 2 from the menu.  
+
+   - Enter the name of the subscriber to remove.  
+
+3. Promoting Subscription Level: 
+
+   - Choose option 3 from the menu.  
+
+   - Enter the name of the subscriber to promote.  
+
+   - Enter the new subscription level (0 for Silver, 1 for Gold, 2 for Platinum).  
+
+4. Exiting the System: 
+
+   - Choose option 4 from the menu to exit the system. 
+
+ 
