@@ -1,1 +1,1 @@
-void show_report();
+void show_report(bool print);
