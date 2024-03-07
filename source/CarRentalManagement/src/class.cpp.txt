@@ -1,1 +1,1 @@
-void show_report();
+int show_report();
