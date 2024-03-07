@@ -93,10 +93,10 @@ Classes:
                 void subList(string name, SubscriberLevel level)
                     -The list of subscribers is displayed.
           d) See curent subscription book:
-                void currentSubList(string name, SubscriberLevel level, &Rentcars)
+                void currentSubList(string name, SubscriberLevel level, vector<Car> &Rentcars)
                     -List of subscribers who have rented a car.
           e) See  the revenue so far:
-                void revenue()
+                int revenue(int sizeof(Rentcars), int days,subscriberLevel Level)
                     -Total revenue of the car rental system is displayed.
           f) Return to main menu:
       }
