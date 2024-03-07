@@ -90,10 +90,10 @@ Classes:
                 void rentedCar(vector<Car> &Rentcars)
                     -All the rented cars are displayed.
           c) See the subscribers list:
-                void subList()
+                void subList(string name, SubscriberLevel level)
                     -The list of subscribers is displayed.
           d) See curent subscription book:
-                void currentSubList()
+                void currentSubList(string name, SubscriberLevel level, &Rentcars)
                     -List of subscribers who have rented a car.
           e) See  the revenue so far:
                 void revenue()
