@@ -62,23 +62,23 @@ Classes:
      -promoteSubscriber(string id, int newLevel): Promotes the subscription level of the subscriber with the specified name.  
 
      - levelToString(SubscriptionLevel level): Helper method to convert SubscriptionLevel enum to string.  
-"main.cpp file"
-3.Manage Subscription
 
-   #include"baseclass.h"  // We will include the baseclaass.h file in main.cpp file
-      subscriptionManagement()
-      {
-          a) Rent a car:
-               void rentCar()
-                   -The customer can rent a car from the available list of cars.We will create an object for car class and using that object we will access the rentCar() function.
-          b) Return a car:
-               void returnCar()
-                   -The customer can return a car upon his deadline.The returnCar() function in main.cpp file will be called.
-          c) Extend the rental period:
-               void extendRental()
-                   -The customer can extend the rental period of a car.The extendRental() function in the main.cpp file will be called.
-          d) Return to main menu:
-      }
+
+*Manage subscription*
+      
+      a) Rent a car:
+            void rentCar(vector<Car> &cars)
+                  -The available list of cars is stored in the form of vector and that vector is given as a parameter to view the available list of cars.
+                  -The customer can rent a car from the available list of cars.
+      b) Return a car:
+            void returnCar(vector<Car> &cars,string num)
+                   -The cars list in the form of vector and registration number taken from the user are given as parameters.
+                   -The customer can return a car upon his deadline.
+      c) Extend the rental period:
+            void extendRental(string brandName,string num,vector<Car> &cars)
+                   -If the given credentials matches,the customer can extend the rental period of the car.
+      d) Return to main menu:
+      
 
 4.Reports
       reports()
