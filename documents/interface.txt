@@ -67,22 +67,25 @@ Classes:
 *Manage subscription*
       
       a) Rent a car:
-            void rentCar(vector<Car> &cars,string subscriberLevel)
+            void rentCar(vector<Car> &cars,vector<Car> &cars1,vector<int> &amount,string subscriberLevel)
                   -The available list of cars is stored in the form of vector and that vector is given as a parameter to view the available list of cars.
                   -The customer should subscribe in order to rent a car.
                         (*Silver subscription-Can rent upto 1 car.
                          *Gold subscription-Can rent upto 2 cars.
                          *Platinum subscription-Can rent upto 3 cars.)
-                        This subscriber level is given as a parameter with the name subscriberLevel.    
+                        This subscriber level is given as a parameter with the name subscriberLevel.
+                  - Two more vectors are given as parameters.
                   -The customer can rent a car from the available list of cars.
       b) Return a car:
-            void returnCar(vector<Car> &cars,string brandName,string regNum)
+            void returnCar(vector<Car> &cars,vector<int> &amount,string brandName,string regNum)
                    -The cars list in the form of vector is given as one of the parameters.
+                   - The vector containing the amounts is given as parameter.
                    -The brand name and registration number are taken from the users and given as parameters.
                    -The customer can return a car upon his deadline.
       c) Extend the rental period:
-            void extendRental(vector<Car> &cars,string brandName,string num)
+            void extendRental(vector<Car> &cars,vector<int> &amount,string brandName,string num)
                    -The cars list in the form of vector is given as one of the parameters.
+                   -The vector containing the amounts is given as parameter.
                    -The brand name and registration number are taken from the users and given as parameters.
                    -If the given credentials matches,the customer can extend the rental period of the car.
       d) Return to main menu:
@@ -101,7 +104,7 @@ Classes:
                 void displaySubscribers(vector<Subscriber> subscribers)
                     -The list of subscribers is displayed with the name and subscriber level  which we get from the subscribers vector.
           d) See curent subscription book:
-                void displayCurrentSubscription(vector<Car>& RentedCars  
+                void displayCurrentSubscription(vector<Car>& RentedCars)
                     -List of subscribers who have rented a car with model, registration number and subscriber which we get from the RentedCars vector.
           e) See  the revenue so far:
                  void displayRevenue(vector<Car>& RentedCars)
