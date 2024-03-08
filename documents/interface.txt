@@ -92,20 +92,20 @@ Classes:
       reports()
       {
           a) See available  cars list:
-                void carList(vector<Car> &cars)
-                    -All the cars are displayed.
+                void displayCars(vector<Car> &cars)
+                    -All the cars are displayed with brand name, model and registration number  which we get from the cars vector.
           b) See cars under rental now:
-                void rentedCar(vector<Car> &Rentcars)
-                    -All the rented cars are displayed.
+                void displayRentedCars(vector<Car> &Rentedcars)
+                    -All the rented cars are displayed with brand name, model and registration number  which we get from the RentedCars vector.
           c) See the subscribers list:
-                void subList(string name, SubscriberLevel level)
-                    -The list of subscribers is displayed.
+                void displaySubscribers(vector<Subscriber> subscribers)
+                    -The list of subscribers is displayed with the name and subscriber level  which we get from the subscribers vector.
           d) See curent subscription book:
-                void currentSubList(string name, SubscriberLevel level, vector<Car> &Rentcars)
-                    -List of subscribers who have rented a car.
+                void displayCurrentSubscription(vector<Car>& RentedCars  
+                    -List of subscribers who have rented a car with model, registration number and subscriber which we get from the RentedCars vector.
           e) See  the revenue so far:
-                int revenue(int sizeof(Rentcars), int days,subscriberLevel Level)
-                    -Total revenue of the car rental system is displayed.
+                 void displayRevenue(vector<Car>& RentedCars)
+                    -Total revenue of the car rental system is displayed by summing the revenue of individual cars  which we get from the RentedCars vector.
           f) Return to main menu:
       }
 
