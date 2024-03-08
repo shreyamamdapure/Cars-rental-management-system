@@ -26,7 +26,7 @@ void displaySubscribers(const vector<Subscriber> subscribers){
 void displayCurrentSubscription(const vector<Car>& RentedCars){
     cout << "List of subscribers who have currently rented Cars:" << endl;
     for (const auto& car : RentedCars) {
-        cout << "Brand: " << car.registrationNumber << ", Model: " << car.subscriber << endl;
+        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << ", Subscriber: " << car.subscriber << endl;
     }
 }
 
@@ -36,5 +36,6 @@ void displayRevenue(const vector<Car>& RentedCars){
     for (const auto& car : RentedCars) {
        sum_total+=car.revenue;
     }
+    cout<<sum_total<<endl;
 }
 
