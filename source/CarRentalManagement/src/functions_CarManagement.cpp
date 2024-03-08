@@ -1,6 +1,5 @@
-#include "headers/functions.h"
-
 #include <iostream>
+#include "headers/functions_CarManagement.h"
 
 void addCar(std::vector<Car> &cars) {
     Car newCar;
@@ -86,6 +85,9 @@ void manageSubscriber() {
 
 }
 
+
+
+
 void manageSubscription() {
     char subChoice;
                   std::cout << "Manage subscription:\n";
@@ -99,7 +101,7 @@ void manageSubscription() {
                             std::cout << "Rent Car Successfully...\n";
                             break;
                         case 'b':
-                             std::cout << "Returned car Successfully...\n";
+                             std::cout << "Returned car Sucessfully...\n";
                              break;
                         case 'c':
                              std::cout << "Extended the Rental Period...\n";
@@ -124,8 +126,7 @@ void reports() {
                          std::cout << "c) See the subscribers list:\n";
                          std::cout << "d) See current subscription book:\n";
                          std::cout << "e) See the Revenue so far:\n";
-                         //std::cout << "Enter your choice: ";
-                         // std::cout << "d) See current subscription book:\n";
+                         //std::cout << "Enter your choice: ";                              	                                                	                             	                                                                                                                                                                                                                             std::cout << "d) See current subscription book:\n";
                          std::cout << "Enter your choice: ";
                          std::cin >> subChoice;
                          switch (subChoice) {

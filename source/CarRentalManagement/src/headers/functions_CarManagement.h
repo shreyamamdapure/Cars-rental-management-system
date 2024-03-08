@@ -2,7 +2,8 @@
 #define FUNCTIONS_H
 
 #include <vector>
-#include "car.h"
+
+#include "Class_CarManagement.h"
 
 void addCar(std::vector <Car> &cars);
 void removeCar(std::vector <Car> &carList);
