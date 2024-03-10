@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     cout << "----------------------" << endl;
-    cout << "Company Name : RapidRidehhhh Rentals: " << endl;
+    cout << "Company Name : RapidRentals " << endl;
     cout << "----------------------" << endl;
     vector<Car> cars;
     int choice;

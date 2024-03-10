@@ -132,6 +132,7 @@ void reports() {
                          switch (subChoice) {
                             case 'a':
                                 std::cout << "This is the available car list...\n";
+
                                 break;
                             case 'b':
                                  std::cout << "This is the cars list under rental ...\n";
