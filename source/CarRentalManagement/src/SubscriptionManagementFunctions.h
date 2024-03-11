@@ -28,10 +28,16 @@
 
         cout << "List of Cars:" << endl;
         int i=1;
-
+        if(rentedCar.empty())
+        {
+            cout<<"No cars have been rented yet"<<endl;
+        }
+        else
+        {
         for (const auto& car : rentedCar) {
             cout <<i<<" " << "Brand: " << car.brand << ", Model: " << car.model << ", Registration Number: " << car.registrationNumber<<endl;
             i++;
+        }
         }
     }
     void displayBill(const vector<int>& amount) {
