@@ -23,12 +23,6 @@ void displaySubscribers(const vector<Subscriber> subscribers){
         cout << "Name " <<Subscriber::getName() << ", Subscription level    : " << Subscriber::getLevel() << endl;
     }
 }
-void displayCurrentSubscription(const vector<Car>& RentedCars){
-    cout << "List of subscribers who have currently rented Cars:" << endl;
-    for (const auto& car : RentedCars) {
-        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << endl;
-    }
-}
 
 void displayRevenue(const vector<Car>& amount    ){
     int sum_total=0;
