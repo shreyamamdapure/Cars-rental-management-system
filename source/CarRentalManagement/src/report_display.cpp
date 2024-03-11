@@ -26,7 +26,7 @@ void displaySubscribers(const vector<Subscriber> subscribers){
 void displayCurrentSubscription(const vector<Car>& RentedCars){
     cout << "List of subscribers who have currently rented Cars:" << endl;
     for (const auto& car : RentedCars) {
-        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << ", Subscriber: " << endl;
+        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << endl;
     }
 }
 
