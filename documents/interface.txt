@@ -84,10 +84,10 @@ Classes:
       reports()
       {
           a) See available  cars list:
-                void carList()
+                void carList(vector<Car> &cars)
                     -All the cars are displayed.
           b) See cars under rental now:
-                void rentedCar()
+                void rentedCar(vector<Car> &Rentcars)
                     -All the rented cars are displayed.
           c) See the subscribers list:
                 void subList()
