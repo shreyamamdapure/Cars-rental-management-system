@@ -26,11 +26,11 @@ void displaySubscribers(const vector<Subscriber> subscribers){
 void displayCurrentSubscription(const vector<Car>& RentedCars){
     cout << "List of subscribers who have currently rented Cars:" << endl;
     for (const auto& car : RentedCars) {
-        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << ", Subscriber: " << car.subscriber << endl;
+        cout << "Model :"<< car.model << "Registrion number: " << car.registrationNumber << ", Subscriber: " << endl;
     }
 }
 
-void displayRevenue(const vector<Car>& RentedCars){
+void displayRevenue(const vector<Car>& amount    ){
     int sum_total=0;
     cout << "The total revenue" << endl;
     for (const auto& car : RentedCars) {
