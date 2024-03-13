@@ -98,12 +98,15 @@ void manageSubscription() {
                      std::cin >> subChoice;
                      switch (subChoice) {
                         case 'a':
-                            std::cout << "Rent Car Successfully...\n";
+                            _rentCar();
+                            std::cout << "Rented Car Successfully...\n";
                             break;
                         case 'b':
+                             _returnCar();
                              std::cout << "Returned car Sucessfully...\n";
                              break;
                         case 'c':
+                             _extendRental();
                              std::cout << "Extended the Rental Period...\n";
                              break;
                         default:
