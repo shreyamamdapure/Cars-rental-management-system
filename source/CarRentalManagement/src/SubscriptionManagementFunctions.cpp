@@ -56,3 +56,27 @@
         cout<<"\t\t Thank You for choosing our sytsem"<<endl;
         cout<<"\t\t-----------------------------"<<endl;
     }
+    void _extendRental()
+    {
+        string brand,regNo;
+        cout<<"Enter the brand of the car:"<<endl;
+        cin>>brand;
+        cout<<"Enter the registration number of the car that you have rented:"<<endl;
+        extendRental(cars,amount,brand,regNo);
+    }
+    void _returnCar()
+    {
+        string brand,regNo;
+        cout<<"Enter the brand of the car:"<<endl;
+        cin>>brand;
+        cout<<"Enter the registration number of the car that you have rented:"<<endl;
+        cin>>regNo;
+        returnCar(cars,amount,brand,regNo);
+    }
+    void _rentCar()
+    {
+        cout<<"Enter your subscriber level:"<<endl;
+        string subscriberLevel;
+        cin>>subscriberLevel;
+        rentCar(cars,cars1,amount,subscriberLevel);
+    }
