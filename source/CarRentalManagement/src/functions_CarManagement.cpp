@@ -127,33 +127,24 @@ void reports() {
                          std::cout << "a) See available car list:\n";
                          std::cout << "b) See cars under rental now:\n";
                          std::cout << "c) See the subscribers list:\n";
-                         std::cout << "d) See current subscription book:\n";
-                         std::cout << "e) See the Revenue so far:\n";
+                         std::cout << "d) See the Revenue so far:\n";
                          //std::cout << "Enter your choice: ";                              	                                                	                             	                                                                                                                                                                                                                             std::cout << "d) See current subscription book:\n";
                          std::cout << "Enter your choice: ";
                          std::cin >> subChoice;
                          switch (subChoice) {
                             case 'a':
-                                std::cout << "This is the available car list...\n";
-
+                                displayCars(const vector<Car>& cars);
                                 break;
                             case 'b':
-                                 std::cout << "This is the cars list under rental ...\n";
+                                displayRentedCars(const vector<Car>& RentedCars);
                                  break;
                             case 'c':
-                                 std::cout << "This is the subscribers list...\n";
+                                 displaySubscribers(const vector<Subscriber>& subscribers);
                                  break;
                             case 'd':
-                                 std::cout << "This is the current subscription book...\n";
-                                 break;
-                            case 'e':
-                                 std::cout<<"This is the Revenue so far...\n";
+                                 displayRevenue(const vector<Car>& amount);
                                  break;
                             default:
                             std::cout << "Invalid choice!\n";
                         }
-
-
-
-
 }
