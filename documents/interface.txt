@@ -62,42 +62,53 @@ Classes:
      -promoteSubscriber(string id, int newLevel): Promotes the subscription level of the subscriber with the specified name.  
 
      - levelToString(SubscriptionLevel level): Helper method to convert SubscriptionLevel enum to string.  
-"main.cpp file"
-3.Manage Subscription
 
-   #include"baseclass.h"  // We will include the baseclaass.h file in main.cpp file
-      subscriptionManagement()
-      {
-          a) Rent a car:
-               void rentCar()
-                   -The customer can rent a car from the available list of cars.We will create an object for car class and using that object we will access the rentCar() function.
-          b) Return a car:
-               void returnCar()
-                   -The customer can return a car upon his deadline.The returnCar() function in main.cpp file will be called.
-          c) Extend the rental period:
-               void extendRental()
-                   -The customer can extend the rental period of a car.The extendRental() function in the main.cpp file will be called.
-          d) Return to main menu:
-      }
+
+*Manage subscription*
+      
+      a) Rent a car:
+            void rentCar(vector<Car> &cars,vector<Car> &cars1,vector<int> &amount,string subscriberLevel)
+                  -The available list of cars is stored in the form of vector and that vector is given as a parameter to view the available list of cars.
+                  -The customer should subscribe in order to rent a car.
+                        (*Silver subscription-Can rent upto 1 car.
+                         *Gold subscription-Can rent upto 2 cars.
+                         *Platinum subscription-Can rent upto 3 cars.)
+                        This subscriber level is given as a parameter with the name subscriberLevel.
+                  - Two more vectors are given as parameters.
+                  -The customer can rent a car from the available list of cars.
+      b) Return a car:
+            void returnCar(vector<Car> &cars,vector<int> &amount,string brandName,string regNum)
+                   -The cars list in the form of vector is given as one of the parameters.
+                   - The vector containing the amounts is given as parameter.
+                   -The brand name and registration number are taken from the users and given as parameters.
+                   -The customer can return a car upon his deadline.
+      c) Extend the rental period:
+            void extendRental(vector<Car> &cars,vector<int> &amount,string brandName,string num)
+                   -The cars list in the form of vector is given as one of the parameters.
+                   -The vector containing the amounts is given as parameter.
+                   -The brand name and registration number are taken from the users and given as parameters.
+                   -If the given credentials matches,the customer can extend the rental period of the car.
+      d) Return to main menu:
+      
 
 4.Reports
       reports()
       {
           a) See available  cars list:
-                void carList()
-                    -All the cars are displayed.
+                void displayCars(vector<Car> &cars)
+                    -All the cars are displayed with brand name, model and registration number  which we get from the cars vector.
           b) See cars under rental now:
-                void rentedCar()
-                    -All the rented cars are displayed.
+                void displayRentedCars(vector<Car> &Rentedcars)
+                    -All the rented cars are displayed with brand name, model and registration number  which we get from the RentedCars vector.
           c) See the subscribers list:
-                void subList()
-                    -The list of subscribers is displayed.
+                void displaySubscribers(vector<Subscriber> subscribers)
+                    -The list of subscribers is displayed with the name and subscriber level  which we get from the subscribers vector.
           d) See curent subscription book:
-                void currentSubList()
-                    -List of subscribers who have rented a car.
+                void displayCurrentSubscription(vector<Car>& RentedCars)
+                    -List of subscribers who have rented a car with model, registration number and subscriber which we get from the RentedCars vector.
           e) See  the revenue so far:
-                void revenue()
-                    -Total revenue of the car rental system is displayed.
+                 void displayRevenue(vector<Car>& RentedCars)
+                    -Total revenue of the car rental system is displayed by summing the revenue of individual cars  which we get from the RentedCars vector.
           f) Return to main menu:
       }
 
