@@ -1,4 +1,9 @@
-    void bill(vector<int> &amount,int tot)
+#include<iostream>
+#include<vector>
+#include<string>
+#include "functions_CarManagement.cpp"
+using namespace std;
+void bill(vector<int> &amount,int tot)
     {
     	amount.push_back(tot);
     }
@@ -78,5 +83,5 @@
         cout<<"Enter your subscriber level:"<<endl;
         string subscriberLevel;
         cin>>subscriberLevel;
-        rentCar(cars,cars1,amount,subscriberLevel);
+        rentCar(cars,rentedCar,amount,subscriberLevel);
     }

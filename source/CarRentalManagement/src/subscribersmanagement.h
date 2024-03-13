@@ -1,5 +1,5 @@
-#ifndef SMS_H // C
-#define SMS_H
+#ifndef subscribersmanagement.h
+#define subscribersmanagement.h
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,6 +1,11 @@
 
-
- void extendRental(vector<Car> &cars,vector<int> &amount,string brandName,string num)
+#include<iostream>
+#include<vector>
+#include<string>
+#include "SubscriptionManagementFunctions.cpp"
+//#include"subcribersmanagement.cpp"
+using namespace std;
+		void extendRental(vector<Car> &cars,vector<int> &amount,string brandName,string num)
     {
         int flag;
         int day;

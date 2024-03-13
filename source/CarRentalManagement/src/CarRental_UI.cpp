@@ -2,10 +2,12 @@
 #include <vector>
 #include <string>
 
-#include "headers/Class_CarManagement.h"
-#include "headers/functions_CarManagement.h"
-
-
+#include "Class_CarManagement.h"
+#include "functions_CarManagement.h"
+#include "subscribersmanagement.cpp"
+//#include "subscribersmanagement.h"
+#include "report_display.cpp"
+#include "SubscriptionManagement.cpp"
 using namespace std;
 
 
