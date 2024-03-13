@@ -78,5 +78,5 @@
         cout<<"Enter your subscriber level:"<<endl;
         string subscriberLevel;
         cin>>subscriberLevel;
-        rentCar(cars,cars1,amount,subscriberLevel);
+        rentCar(cars,rentedCar,amount,subscriberLevel);
     }
