@@ -110,58 +110,6 @@ std::string CarRentalSystem::levelToString(SubscriptionLevel level) {
     case SubscriptionLevel::Platinum:
         return "Platinum";
     }
-    return ""; // This should never be reached, just to satisfy the compiler.
+    return ""; 
 }
 
-void handleMenuChoice(CarRentalSystem& rentalSystem, int choice) {
-    if (choice == 1) {
-        std::string name, id;
-        int level;
-
-        std::cout << "Enter subscriber name: ";
-        std::cin >> name;
-        std::cout << "Enter subscriber ID: ";
-        std::cin >> id;
-        std::cout << "Enter subscription level (0 for Silver, 1 for Gold, 2 for Platinum): ";
-        std::cin >> level;
-
-        rentalSystem.addSubscriber(name, id, static_cast<SubscriptionLevel>(level));
-    } else if (choice == 2) {
-        std::string id;
-        std::cout << "Enter subscriber ID to remove: ";
-        std::cin >> id;
-        rentalSystem.removeSubscriberByID(id);
-    } else if (choice == 3) {
-        std::string id;
-        int level;
-        std::cout << "Enter subscriber ID to promote: ";
-        std::cin >> id;
-        std::cout << "Enter new subscription level (0 for Silver, 1 for Gold, 2 for Platinum): ";
-        std::cin >> level;
-        rentalSystem.promoteSubscriber(id, level);
-    } else if (choice == 4) {
-        std::cout << "Exiting..." << std::endl;
-    } else {
-        std::cout << "Invalid choice. Please try again." << std::endl;
-    }
-}
-
-int main() {
-    CarRentalSystem rentalSystem;
-
-    while (true) {
-        std::cout << "Menu:" << std::endl;
-        std::cout << "1. Add a subscriber" << std::endl;
-        std::cout << "2. Remove a subscriber by ID" << std::endl;
-        std::cout << "3. Promote subscription level" << std::endl;
-        std::cout << "4. Exit" << std::endl;
-
-        int choice;
-        std::cin >> choice;
-
-        if (choice == 4) {
-            handleMenuChoice(rentalSystem, choice);
-            break;
-        } else {
-            handleMenuChoice(rentalSystem, choice);
-}     }     return 0; }
