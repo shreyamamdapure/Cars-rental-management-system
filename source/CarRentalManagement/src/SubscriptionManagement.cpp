@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include "SubscriptionManagement.h"
 using namespace std;
 
 
