@@ -1,5 +1,5 @@
-#ifndef subscribersmanagement.h
-#define subscribersmanagement.h
+#ifndef subscribersmanagement_h
+#define subscribersmanagement_h
 #include <iostream>
 #include <vector>
 #include <string>

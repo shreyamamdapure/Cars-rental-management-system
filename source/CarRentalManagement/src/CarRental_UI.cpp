@@ -16,6 +16,7 @@ int main() {
     cout << "Company Name : RapidRentals " << endl;
     cout << "----------------------" << endl;
     vector<Car> cars;
+    vector<Subscriber> subscriber;
     int choice;
 
     while (true) {
@@ -39,7 +40,7 @@ int main() {
                 manageSubscription();
                 break;
             case 4:
-                reports();
+                reports(cars, subscriber);
                 break;
             case 5:
                 cout << "Exiting program...\n";

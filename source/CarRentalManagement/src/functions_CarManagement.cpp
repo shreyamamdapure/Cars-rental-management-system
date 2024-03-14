@@ -1,192 +1,214 @@
 #include <iostream>
 #include "functions_CarManagement.h"
+#include "subscribersmanagement.h"
+#include "report_display.h"
+
+//#include "SubscriptionManagementFunctions.cpp"
 
 void addCar(std::vector<Car> &cars) {
-    Car newCar;
-    std::cout << "Enter Brand: ";
-    std::cin >> newCar.brand;
-    std::cout << "Enter model: ";
-    std::cin >> newCar.model;
-    std::cout << "Enter registrationNumber: ";
-    std::cin >> newCar.registrationNumber;
-    std::cout<<"Enter Price :";
-    std::cin>>newCar.price;
+	Car newCar;
+	std::cout << "Enter Brand: ";
+	std::cin >> newCar.brand;
+	std::cout << "Enter model: ";
+	std::cin >> newCar.model;
+	std::cout << "Enter registrationNumber: ";
+	std::cin >> newCar.registrationNumber;
+	std::cout << "Enter Price :";
+	std::cin >> newCar.price;
 
-    cars.push_back(newCar);
-    std::cout << "Car added successfully!" << std::endl;
+	cars.push_back(newCar);
+	std::cout << "Car added successfully!" << std::endl;
 }
 
-void removeCar(std::vector<Car>& carList) {
-    std::string registrationNumber;
-    std::cout << "Enter registration number of the car to remove: ";
-    std::cin >> registrationNumber;
-    for (auto it = carList.begin(); it != carList.end(); ++it) {
-        if (it->registrationNumber == registrationNumber) {
-            carList.erase(it);
-            std::cout << "Car removed from rental list." << std::endl;
-            return;
-        }
-    }
-    std::cout << "Car with registration number " << registrationNumber << " not found in rental list." << std::endl;
+void removeCar(std::vector<Car> &carList) {
+	std::string registrationNumber;
+	std::cout << "Enter registration number of the car to remove: ";
+	std::cin >> registrationNumber;
+	for (auto it = carList.begin(); it != carList.end(); ++it) {
+		if (it->registrationNumber == registrationNumber) {
+			carList.erase(it);
+			std::cout << "Car removed from rental list." << std::endl;
+			return;
+		}
+	}
+	std::cout << "Car with registration number " << registrationNumber
+			<< " not found in rental list." << std::endl;
 }
 
-void manageCar(std::vector<Car>& cars) {
-    char subChoice;
-    std::cout << "Manage Car:\n";
-    std::cout << "a) Add new car\n";
-    std::cout << "b) Remove existing car\n";
-    std::cout << "c) Return to main menu\n";
-    std::cout << "Enter your choice: ";
-    std::cin >> subChoice;
+void manageCar(std::vector<Car> &cars) {
+	char subChoice;
+	std::cout << "Manage Car:\n";
+	std::cout << "a) Add new car\n";
+	std::cout << "b) Remove existing car\n";
+	std::cout << "c) Return to main menu\n";
+	std::cout << "Enter your choice: ";
+	std::cin >> subChoice;
 
-    switch (subChoice) {
-        case 'a':
-            std::cout << "Adding new car...\n";
-            addCar(cars);
-            break;
-        case 'b':
-            std::cout << "Removing existing car...\n";
-            removeCar(cars);
-            break;
-        case 'c':
-            std::cout << "Returning to main menu...\n";
-            break;
-        default:
-            std::cout << "Invalid choice!\n";
-    }
+	switch (subChoice) {
+	case 'a':
+		std::cout << "Adding new car...\n";
+		addCar(cars);
+		break;
+	case 'b':
+		std::cout << "Removing existing car...\n";
+		removeCar(cars);
+		break;
+	case 'c':
+		std::cout << "Returning to main menu...\n";
+		break;
+	default:
+		std::cout << "Invalid choice!\n";
+	}
 }
 
 void manageSubscriber() {
-                     char subChoice;
-                         std::cout << "Manage Subscriber:\n";
-                         std::cout << "a) Add new subscriber:\n";
-                         std::cout << "b) Remove existing subscriber:\n";
-                         std::cout << "c) Promote Subscription:\n";
-                         std::cout << "d) Returning to main menu:\n";
-                         std::cout << "Enter your choice: ";
-                         std::cin >> subChoice;
+	char subChoice;
+	std::cout << "Manage Subscriber:\n";
+	std::cout << "a) Add new subscriber:\n";
+	std::cout << "b) Remove existing subscriber:\n";
+	std::cout << "c) Promote Subscription:\n";
+	std::cout << "d) Returning to main menu:\n";
+	std::cout << "Enter your choice: ";
+	std::cin >> subChoice;
 
-                         switch (subChoice) {
-                             case 'a': {
-                                 int level_choice;
-                                 std::string name, id;
-                                 SubscriptionLevel level;
-                                 std::cout << "\nName: ";
-                                 std::cin >> name;
-                                 std::cout << "ID: ";
-                                 std::cin >> id;
-                                 std::cout << "Subscription Level: ";
-                                 std::cout << "Choose subscription level:\n";
-                                 std::cout << "1. Silver\n";
-                                 std::cout << "2. Gold\n";
-                                 std::cout << "3. Platinum\n";
-                                 std::cout << "Enter your choice (1, 2, or 3): ";
-                                 std::cin >> level_choice;
-                                 switch (level_choice) {
-                                     case 1:
-                                         level = SubscriptionLevel::Silver;
-                                     case 2:
-                                         level = SubscriptionLevel::Gold;
-                                     case 3:
-                                         level = SubscriptionLevel::Platinum;
-                                     default:
-                                         std::cerr << "Invalid choice! Defaulting to Silver.\n";
-                                         level = SubscriptionLevel::Silver;
-                                 }
-                                 CarRentalSystem::addSubscriber(name, id, level);
-                                 break;
-                             }
-                             case 'b': {
-                                 std::string id;
-                                 SubscriptionLevel level;
-                                 std::cout << "Removing new Subscriber...\n";
-                                 std::cout << "Enter subscriber ID to remove: ";
-                                 std::cin >> id;
-                                 CarRentalSystem::removeSubscriberByID(id);
-                                 break;
-                             }
-                             case 'c': {
-                                 int level_choice;
-                                 std::string id;
-                                 std::cout << "Promote Subscription...\n";
-                                 std::cout << "Subscription Level: ";
-                                 std::cout << "Choose subscription level:\n";
-                                 std::cout << "1. Silver\n";
-                                 std::cout << "2. Gold\n";
-                                 std::cout << "3. Platinum\n";
-                                 std::cout << "Enter your choice (1, 2, or 3): ";
-                                 std::cin >> level_choice;
-                                 CarRentalSystem::promoteSubscriber(id, level_choice);
-                                 break;
-                             }
-                             case 'd':
-                                 std::cout << "Returning to main menu...\n";
-                                 break;
-                             default:
-                                 std::cout << "Invalid choice!\n";
-                         }
+	switch (subChoice) {
+	case 'a': {
+		int level_choice;
+		std::string name, id;
+		SubscriptionLevel level;
+		std::cout << "\nName: ";
+		std::cin >> name;
+		std::cout << "ID: ";
+		std::cin >> id;
+		std::cout << "Subscription Level: ";
+		std::cout << "Choose subscription level:\n";
+		std::cout << "1. Silver\n";
+		std::cout << "2. Gold\n";
+		std::cout << "3. Platinum\n";
+		std::cout << "Enter your choice (1, 2, or 3): ";
+		std::cin >> level_choice;
+		switch (level_choice) {
+		case 1:
+			level = SubscriptionLevel::Silver;
+		case 2:
+			level = SubscriptionLevel::Gold;
+		case 3:
+			level = SubscriptionLevel::Platinum;
+		default:
+			std::cerr << "Invalid choice! Defaulting to Silver.\n";
+			level = SubscriptionLevel::Silver;
+		}
+
+		CarRentalSystem carRentalSystem;
+		carRentalSystem.addSubscriber(name, id, level);
+		break;
+	}
+	case 'b': {
+		std::string id;
+		SubscriptionLevel level;
+		std::cout << "Removing new Subscriber...\n";
+		std::cout << "Enter subscriber ID to remove: ";
+		std::cin >> id;
+		CarRentalSystem carRentalSystem;
+		carRentalSystem.removeSubscriberByID(id);
+		break;
+	}
+	case 'c': {
+		int level_choice;
+		std::string id;
+		std::cout << "Promote Subscription...\n";
+		std::cout << "Subscription Level: ";
+		std::cout << "Choose subscription level:\n";
+		std::cout << "1. Silver\n";
+		std::cout << "2. Gold\n";
+		std::cout << "3. Platinum\n";
+		std::cout << "Enter your choice (1, 2, or 3): ";
+		std::cin >> level_choice;
+		CarRentalSystem carRentalSystem;
+		carRentalSystem.promoteSubscriber(id, level_choice);
+		break;
+	}
+	case 'd':
+		std::cout << "Returning to main menu...\n";
+		break;
+	default:
+		std::cout << "Invalid choice!\n";
+	}
 }
-
-
-
 
 void manageSubscription() {
-    char subChoice;
-                  std::cout << "Manage subscription:\n";
-                     std::cout << "a) Rent a car:\n";
-                     std::cout << "b) Return a car:\n";
-                     std::cout << "c) Extend the Rental period:\n";
-                     std::cout << "Enter your choice: ";
-                     std::cin >> subChoice;
-                     switch (subChoice) {
-                        case 'a':
-                            _rentCar();
-                            std::cout << "Rented Car Successfully...\n";
-                            break;
-                        case 'b':
-                             _returnCar();
-                             std::cout << "Returned car Sucessfully...\n";
-                             break;
-                        case 'c':
-                             _extendRental();
-                             std::cout << "Extended the Rental Period...\n";
-                             break;
-                        default:
-                              std::cout << "Invalid choice!\n";
-                     }
-
-
-
-
-
-
+	char subChoice;
+	std::cout << "Manage subscription:\n";
+	std::cout << "a) Rent a car:\n";
+	std::cout << "b) Return a car:\n";
+	std::cout << "c) Extend the Rental period:\n";
+	std::cout << "Enter your choice: ";
+	std::cin >> subChoice;
+	switch (subChoice) {
+	case 'a':
+	{
+		// TODO: Handle rent car function;
+		// _rentCar();
+		std::cout << "Rented Car Successfully...\n";
+		break;
+	}
+	case 'b':
+	{
+		// TODO: Handle return car function;
+		// _returnCar();
+		std::cout << "Returned car Successfully...\n";
+		break;
+	}
+	case 'c':
+	{
+		// TODO: Handle extend car rental function
+		// _extendRental();
+		std::cout << "Extended the Rental Period...\n";
+		break;
+	}
+	default:
+		std::cout << "Invalid choice!\n";
+	}
 
 }
 
-void reports() {
-                         char subChoice;
-                         std::cout << "Reports:\n";
-                         std::cout << "a) See available car list:\n";
-                         std::cout << "b) See cars under rental now:\n";
-                         std::cout << "c) See the subscribers list:\n";
-                         std::cout << "d) See the Revenue so far:\n";
-                         //std::cout << "Enter your choice: ";                              	                                                	                             	                                                                                                                                                                                                                             std::cout << "d) See current subscription book:\n";
-                         std::cout << "Enter your choice: ";
-                         std::cin >> subChoice;
-                         switch (subChoice) {
-                            case 'a':
-                                displayCars(const vector<Car>& cars);
-                                break;
-                            case 'b':
-                                displayRentedCars(const vector<Car>& RentedCars);
-                                 break;
-                            case 'c':
-                                 displaySubscribers(const vector<Subscriber>& subscribers);
-                                 break;
-                            case 'd':
-                                 displayRevenue(const vector<Car>& amount);
-                                 break;
-                            default:
-                            std::cout << "Invalid choice!\n";
-                        }
+void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  //<- here
+	char subChoice;
+	std::cout << "Reports:\n";
+	std::cout << "a) See available car list:\n";
+	std::cout << "b) See cars under rental now:\n";
+	std::cout << "c) See the subscribers list:\n";
+	std::cout << "d) See the Revenue so far:\n";
+	//std::cout << "Enter your choice: ";                              	                                                	                             	                                                                                                                                                                                                                             std::cout << "d) See current subscription book:\n";
+	std::cout << "Enter your choice: ";
+	std::cin >> subChoice;
+	switch (subChoice) {
+	case 'a':
+	{
+		displayCars(cars);
+		break;
+	}
+	case 'b':
+	{
+		// TODO: Handle displayRentedCars function
+		// where is rented cars, find it call it in parent function like &cars
+		// displayRentedCars(const vector<Car> &RentedCars);
+		displayRentedCars(RentedCars);
+		break;
+	}
+	case 'c':
+	{
+		displaySubscribers(subscribers);
+		break;
+	}
+	case 'd':
+	{
+		// TODO: Handle displayRevenue function
+		// where is amount, find it call it in parent function like &cars
+		// displayRevenue(amount);
+		break;
+	}
+	default:
+		std::cout << "Invalid choice!\n";
+	}
 }
