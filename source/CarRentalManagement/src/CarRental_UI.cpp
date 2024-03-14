@@ -4,19 +4,19 @@
 
 #include "Class_CarManagement.h"
 #include "functions_CarManagement.h"
-#include "subscribersmanagement.cpp"
+//#include "subscribersmanagement.cpp"
 //#include "subscribersmanagement.h"
-#include "report_display.cpp"
-#include "SubscriptionManagement.cpp"
+//#include "report_display.cpp"
+//#include "SubscriptionManagement.cpp"
 using namespace std;
 
-
+vector<Car> cars;
+vector<Subscriber> subscriber;
 int main() {
     cout << "----------------------" << endl;
     cout << "Company Name : RapidRentals " << endl;
     cout << "----------------------" << endl;
-    vector<Car> cars;
-    vector<Subscriber> subscriber;
+
     int choice;
 
     while (true) {

@@ -11,6 +11,6 @@ void removeCar(std::vector <Car> &carList);
 void manageCar(std::vector <Car> &cars);
 void manageSubscriber();
 void manageSubscription();
-void reports(std::vector <Car> &cars, const std::vector<Subscriber>& subscribers);
+void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers);
 
 #endif

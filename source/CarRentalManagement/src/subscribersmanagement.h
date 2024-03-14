@@ -36,7 +36,7 @@ public:
     void addSubscriber(std::string name, std::string id, SubscriptionLevel level);
     void removeSubscriberByID(std::string id);
     void promoteSubscriber(std::string id, int newLevel);
-    std::string levelToString(SubscriptionLevel level);
+    static std::string levelToString(SubscriptionLevel level);
 };
 
 #endif

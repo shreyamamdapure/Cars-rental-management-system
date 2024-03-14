@@ -2,6 +2,7 @@
 #include "functions_CarManagement.h"
 #include "subscribersmanagement.h"
 #include "report_display.h"
+#include "SubscriptionManagement.h"
 
 //#include "SubscriptionManagementFunctions.cpp"
 
@@ -185,7 +186,7 @@ void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  /
 	switch (subChoice) {
 	case 'a':
 	{
-		displayCars(cars);
+		display_Cars(cars);
 		break;
 	}
 	case 'b':
@@ -193,7 +194,7 @@ void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  /
 		// TODO: Handle displayRentedCars function
 		// where is rented cars, find it call it in parent function like &cars
 		// displayRentedCars(const vector<Car> &RentedCars);
-		displayRentedCars(RentedCars);
+		//displayRentedCars(rentedCar);
 		break;
 	}
 	case 'c':
@@ -205,7 +206,7 @@ void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  /
 	{
 		// TODO: Handle displayRevenue function
 		// where is amount, find it call it in parent function like &cars
-		// displayRevenue(amount);
+		//displayRevenue(amount);
 		break;
 	}
 	default:
