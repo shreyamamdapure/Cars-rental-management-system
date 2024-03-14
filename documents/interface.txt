@@ -67,7 +67,7 @@ Classes:
 *Manage subscription*
       
       a) Rent a car:
-            void rentCar(vector<Car> &cars,vector<Car> &cars1,vector<int> &amount,string subscriberLevel)
+            void rentCar(vector<Car> &cars,vector<Car> &rentedCar,vector<int> &amount,string subscriberLevel)
                   -The available list of cars is stored in the form of vector and that vector is given as a parameter to view the available list of cars.
                   -The customer should subscribe in order to rent a car.
                         (*Silver subscription-Can rent upto 1 car.
