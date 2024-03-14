@@ -3,6 +3,7 @@
 #include "subscribersmanagement.h"
 #include "report_display.h"
 #include "SubscriptionManagement.h"
+#include "SubscriptionManagement.cpp"
 
 //#include "SubscriptionManagementFunctions.cpp"
 
@@ -62,7 +63,7 @@ void manageCar(std::vector<Car> &cars) {
 	}
 }
 
-void manageSubscriber() {
+void manageSubscriber(CarRentalSystem &carRentalSystem) {
 	char subChoice;
 	std::cout << "Manage Subscriber:\n";
 	std::cout << "a) Add new subscriber:\n";
@@ -91,16 +92,17 @@ void manageSubscriber() {
 		switch (level_choice) {
 		case 1:
 			level = SubscriptionLevel::Silver;
+			break;
 		case 2:
 			level = SubscriptionLevel::Gold;
+			break;
 		case 3:
 			level = SubscriptionLevel::Platinum;
+			break;
 		default:
 			std::cerr << "Invalid choice! Defaulting to Silver.\n";
 			level = SubscriptionLevel::Silver;
 		}
-
-		CarRentalSystem carRentalSystem;
 		carRentalSystem.addSubscriber(name, id, level);
 		break;
 	}
@@ -110,7 +112,6 @@ void manageSubscriber() {
 		std::cout << "Removing new Subscriber...\n";
 		std::cout << "Enter subscriber ID to remove: ";
 		std::cin >> id;
-		CarRentalSystem carRentalSystem;
 		carRentalSystem.removeSubscriberByID(id);
 		break;
 	}
@@ -118,6 +119,8 @@ void manageSubscriber() {
 		int level_choice;
 		std::string id;
 		std::cout << "Promote Subscription...\n";
+		std::cout << "Enter Subscriber ID to promote: ";
+		std::cin >> id;
 		std::cout << "Subscription Level: ";
 		std::cout << "Choose subscription level:\n";
 		std::cout << "1. Silver\n";
@@ -125,7 +128,6 @@ void manageSubscriber() {
 		std::cout << "3. Platinum\n";
 		std::cout << "Enter your choice (1, 2, or 3): ";
 		std::cin >> level_choice;
-		CarRentalSystem carRentalSystem;
 		carRentalSystem.promoteSubscriber(id, level_choice);
 		break;
 	}
@@ -146,24 +148,21 @@ void manageSubscription() {
 	std::cout << "Enter your choice: ";
 	std::cin >> subChoice;
 	switch (subChoice) {
-	case 'a':
-	{
+	case 'a': {
 		// TODO: Handle rent car function;
-		// _rentCar();
+		_rentCar();
 		std::cout << "Rented Car Successfully...\n";
 		break;
 	}
-	case 'b':
-	{
+	case 'b': {
 		// TODO: Handle return car function;
-		// _returnCar();
+		_returnCar();
 		std::cout << "Returned car Successfully...\n";
 		break;
 	}
-	case 'c':
-	{
+	case 'c': {
 		// TODO: Handle extend car rental function
-		// _extendRental();
+		_extendRental();
 		std::cout << "Extended the Rental Period...\n";
 		break;
 	}
@@ -173,7 +172,7 @@ void manageSubscription() {
 
 }
 
-void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  //<- here
+void reports(std::vector<Car> &cars, std::vector<Subscriber> &subscribers) { //<- here
 	char subChoice;
 	std::cout << "Reports:\n";
 	std::cout << "a) See available car list:\n";
@@ -184,29 +183,25 @@ void reports(std::vector <Car> &cars, std::vector<Subscriber>& subscribers) {  /
 	std::cout << "Enter your choice: ";
 	std::cin >> subChoice;
 	switch (subChoice) {
-	case 'a':
-	{
+	case 'a': {
 		display_Cars(cars);
 		break;
 	}
-	case 'b':
-	{
+	case 'b': {
 		// TODO: Handle displayRentedCars function
 		// where is rented cars, find it call it in parent function like &cars
-		// displayRentedCars(const vector<Car> &RentedCars);
-		//displayRentedCars(rentedCar);
+		//displayRentedCars(const vector<Car> &RentedCars);
+		displayRentedCars(rentedCar);
 		break;
 	}
-	case 'c':
-	{
+	case 'c': {
 		displaySubscribers(subscribers);
 		break;
 	}
-	case 'd':
-	{
+	case 'd': {
 		// TODO: Handle displayRevenue function
 		// where is amount, find it call it in parent function like &cars
-		//displayRevenue(amount);
+		displayRevenue(amount);
 		break;
 	}
 	default:

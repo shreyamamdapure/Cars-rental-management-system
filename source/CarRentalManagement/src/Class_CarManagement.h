@@ -3,12 +3,12 @@
 
 #include <string>
 
-class Car{
+class Car {
 public:
-    std::string brand;
-    std::string model;
-    std::string registrationNumber;
-    int price;
+	std::string brand;
+	std::string model;
+	std::string registrationNumber;
+	int price;
 };
 
 #endif

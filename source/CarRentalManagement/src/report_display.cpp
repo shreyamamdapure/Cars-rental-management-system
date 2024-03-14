@@ -27,14 +27,15 @@ void displaySubscribers(const vector<Subscriber> &subscribers) {
 	cout << "List of Subscribers:" << endl;
 	for (const auto &Subscriber : subscribers) {
 		cout << "Name " << Subscriber.getName() << ", Subscription level    : "
-				<< CarRentalSystem::levelToString(Subscriber.getLevel()) << endl;
+				<< CarRentalSystem::levelToString(Subscriber.getLevel())
+				<< endl;
 	}
 }
 
 void displayRevenue(const vector<int> &amount) {
 	int sum_total = 0;
 	cout << "The total revenue" << endl;
-	for (const auto &car: amount) {
+	for (const auto &car : amount) {
 		sum_total += car;
 	}
 	cout << sum_total << endl;

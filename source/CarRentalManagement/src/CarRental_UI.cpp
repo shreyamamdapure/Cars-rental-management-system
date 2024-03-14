@@ -12,44 +12,45 @@ using namespace std;
 
 vector<Car> cars;
 vector<Subscriber> subscriber;
+CarRentalSystem carRentalSystem;
 int main() {
-    cout << "----------------------" << endl;
-    cout << "Company Name : RapidRentals " << endl;
-    cout << "----------------------" << endl;
+	cout << "----------------------" << endl;
+	cout << "Company Name : RapidRentals" << endl;
+	cout << "----------------------" << endl;
 
-    int choice;
+	int choice;
 
-    while (true) {
-        cout << "Main Menu:\n";
-        cout << "1. Manage Car\n";
-        cout << "2. Manage Subscriber\n";
-        cout << "3. Manage Subscription\n";
-        cout << "4. Reports\n";
-        cout << "5. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+	while (true) {
+		cout << "Main Menu:\n";
+		cout << "1. Manage Car\n";
+		cout << "2. Manage Subscriber\n";
+		cout << "3. Manage Subscription\n";
+		cout << "4. Reports\n";
+		cout << "5. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
 
-        switch (choice) {
-            case 1:
-                manageCar(cars);
-                break;
-            case 2:
-                manageSubscriber();
-                break;
-            case 3:
-                manageSubscription();
-                break;
-            case 4:
-                reports(cars, subscriber);
-                break;
-            case 5:
-                cout << "Exiting program...\n";
-                return 0;
-            default:
-                cout << "Invalid choice!\n";
-        }
-    }
+		switch (choice) {
+		case 1:
+			manageCar(cars);
+			break;
+		case 2:
+			manageSubscriber(carRentalSystem);
+			break;
+		case 3:
+			manageSubscription();
+			break;
+		case 4:
+			reports(cars, subscriber);
+			break;
+		case 5:
+			cout << "Exiting program...\n";
+			return 0;
+		default:
+			cout << "Invalid choice!\n";
+		}
+	}
 
-    return 0;
+	return 0;
 }
 
