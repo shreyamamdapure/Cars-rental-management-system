@@ -44,7 +44,7 @@
  
     c) See the subscribers list:  //REQ-004-003
           The manager car see the currently rented subscribers list of users.
-    d) See curent subscription book: //REQ-004-004
+    d) See current subscription book: //REQ-004-004
           The manager can see the entire list of subscribers.
     e) See the revenue so far:  //REQ-004-005
           The manager car see the  total revenue so far.
