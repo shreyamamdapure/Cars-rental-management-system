@@ -3,10 +3,12 @@
 #include "subscribersmanagement.h"
 #include "report_display.h"
 #include "SubscriptionManagement.h"
-#include "SubscriptionManagement.cpp"
+//#include "SubscriptionManagement.cpp"
 
 //#include "SubscriptionManagementFunctions.cpp"
-
+extern vector<Car>rentedCar;
+extern vector<int>amount;
+extern vector<Subscriber>subscribers;
 void addCar(std::vector<Car> &cars) {
 	Car newCar;
 	std::cout << "Enter Brand: ";
@@ -150,7 +152,7 @@ void manageSubscription() {
 	switch (subChoice) {
 	case 'a': {
 		// TODO: Handle rent car function;
-		_rentCar();
+	_rentCar();
 		std::cout << "Rented Car Successfully...\n";
 		break;
 	}

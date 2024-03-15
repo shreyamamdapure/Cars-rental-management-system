@@ -226,6 +226,7 @@ void _extendRental() {
 	cin >> brand;
 	cout << "Enter the registration number of the car that you have rented:"
 			<< endl;
+	cin>>regNo;
 	extendRental(cars, amount, brand, regNo);
 }
 void _returnCar() {
