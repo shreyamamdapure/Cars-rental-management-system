@@ -33,6 +33,7 @@ void displaySubscribers(const vector<Subscriber> &subscribers) {
 	for (auto it = subscribers.begin(); it != subscribers.end(); ++it) {
 			//if (it->getID() == id) {
 				//std::cout << "Subscriber removed successfully:" << std::endl;
+				std::cout<<"tes"<<endl;
 				std::cout << "Name: " << it->getName() << std::endl;
 				std::cout << "ID: " << it->getID() << std::endl;
 				//std::cout << "Subscription Level: " << levelToString(it->getLevel())<< std::endl;

@@ -29,7 +29,7 @@ public:
 
 class CarRentalSystem {
 private:
-	std::vector<Subscriber> subscribers;
+	//std::vector<Subscriber> subscribers;
 
 public:
 	void addSubscriber(const std::string &name, const std::string &id,

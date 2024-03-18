@@ -1,5 +1,8 @@
 #include "subscribersmanagement.h"
+#include <vector>
+using namespace std;
 
+extern vector <Subscriber> subscriber;
 Subscriber::Subscriber(std::string n, std::string i, SubscriptionLevel l,
 		int max, double disc) :
 		name(n), id(i), level(l), maxCars(max), discount(disc) {
@@ -49,7 +52,7 @@ void CarRentalSystem::addSubscriber(const std::string &name,
 		break;
 	}
 
-	subscribers.push_back(Subscriber(name, id, level, maxCars, discount));
+	subscriber.push_back(Subscriber(name, id, level, maxCars, discount));
 
 	std::cout << "Subscriber added successfully:" << std::endl;
 	std::cout << "Name: " << name << std::endl;
@@ -58,14 +61,14 @@ void CarRentalSystem::addSubscriber(const std::string &name,
 }
 
 void CarRentalSystem::removeSubscriberByID(const std::string &id) {
-	for (auto it = subscribers.begin(); it != subscribers.end(); ++it) {
+	for (auto it = subscriber.begin(); it != subscriber.end(); ++it) {
 		if (it->getID() == id) {
 			std::cout << "Subscriber removed successfully:" << std::endl;
 			std::cout << "Name: " << it->getName() << std::endl;
 			std::cout << "ID: " << it->getID() << std::endl;
 			std::cout << "Subscription Level: " << levelToString(it->getLevel())
 					<< std::endl;
-			subscribers.erase(it);
+			subscriber.erase(it);
 			return;
 		}
 
@@ -75,7 +78,7 @@ void CarRentalSystem::removeSubscriberByID(const std::string &id) {
 }
 
 void CarRentalSystem::promoteSubscriber(std::string id, int newLevel) {
-	for (auto &subscriber : subscribers) {
+	for (auto &subscriber : subscriber) {
 		if (subscriber.getID() == id) {
 			SubscriptionLevel currentLevel = subscriber.getLevel();
 			SubscriptionLevel level;
