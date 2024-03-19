@@ -11,6 +11,7 @@
 using namespace std;
 
 vector<Car> cars;
+vector<Car> carList;
 vector<Subscriber> subscriber;
 CarRentalSystem carRentalSystem;
 int main() {
@@ -32,7 +33,7 @@ int main() {
 
 		switch (choice) {
 		case 1:
-			manageCar(cars);
+			manageCar(cars,carList);
 			break;
 		case 2:
 			manageSubscriber(carRentalSystem);
@@ -41,7 +42,7 @@ int main() {
 			manageSubscription();
 			break;
 		case 4:
-			reports(cars, subscriber);
+			reports(cars,carList, subscriber);
 			break;
 		case 5:
 			cout << "Exiting program...\n";

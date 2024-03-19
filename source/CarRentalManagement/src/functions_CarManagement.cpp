@@ -6,10 +6,11 @@
 //#include "SubscriptionManagement.cpp"
 
 //#include "SubscriptionManagementFunctions.cpp"
+extern vector<Car>carList;
 extern vector<Car>rentedCar;
 extern vector<int>amount;
 extern vector<Subscriber>subscribers;
-void addCar(std::vector<Car> &cars) {
+void addCar(std::vector<Car> &cars,std::vector<Car> &carList) {
 	Car newCar;
 	std::cout << "Enter Brand: ";
 	std::cin >> newCar.brand;
@@ -19,7 +20,7 @@ void addCar(std::vector<Car> &cars) {
 	std::cin >> newCar.registrationNumber;
 	std::cout << "Enter Price :";
 	std::cin >> newCar.price;
-
+	carList.push_back(newCar);
 	cars.push_back(newCar);
 	std::cout << "Car added successfully!" << std::endl;
 }
@@ -39,7 +40,7 @@ void removeCar(std::vector<Car> &carList) {
 			<< " not found in rental list." << std::endl;
 }
 
-void manageCar(std::vector<Car> &cars) {
+void manageCar(std::vector<Car> &cars,std::vector<Car> &carList) {
 	char subChoice;
 	std::cout << "Manage Car:\n";
 	std::cout << "a) Add new car\n";
@@ -51,11 +52,11 @@ void manageCar(std::vector<Car> &cars) {
 	switch (subChoice) {
 	case 'a':
 		std::cout << "Adding new car...\n";
-		addCar(cars);
+		addCar(cars,carList);
 		break;
 	case 'b':
 		std::cout << "Removing existing car...\n";
-		removeCar(cars);
+		removeCar(carList);
 		break;
 	case 'c':
 		std::cout << "Returning to main menu...\n";
@@ -174,7 +175,7 @@ void manageSubscription() {
 
 }
 
-void reports(std::vector<Car> &cars, std::vector<Subscriber> &subscribers) { //<- here
+void reports(std::vector<Car> &cars,std::vector<Car> &carList, std::vector<Subscriber> &subscribers) { //<- here
 	char subChoice;
 	std::cout << "Reports:\n";
 	std::cout << "a) See available car list:\n";
@@ -186,7 +187,7 @@ void reports(std::vector<Car> &cars, std::vector<Subscriber> &subscribers) { //<
 	std::cin >> subChoice;
 	switch (subChoice) {
 	case 'a': {
-		display_Cars(cars);
+		display_Cars(carList);
 		break;
 	}
 	case 'b': {

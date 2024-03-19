@@ -6,17 +6,17 @@
 #include "functions_CarManagement.h"
 using namespace std;
 //extern vector<Subscriber> subscribers;
-void display_Cars(const vector<Car> &cars) {
+void display_Cars(const vector<Car> &carList) {
 	cout << "List of Cars:" << endl;
-	for (const auto &car : cars) {
+	for (const auto &car : carList) {
 		cout << "Brand: " << car.brand << ", Model: " << car.model
 				<< ", Registration Number: " << car.registrationNumber << endl;
 	}
 }
 
-void displayRentedCars(const vector<Car> &RentedCars) {
+void displayRentedCars(const vector<Car> &RentedCar) {
 	cout << "List of Rented Cars:" << endl;
-	for (const auto &car : RentedCars) {
+	for (const auto &car : RentedCar) {
 		cout << "Brand: " << car.brand << ", Model: " << car.model
 				<< ", Registration Number: " << car.registrationNumber << endl;
 	}
@@ -24,7 +24,7 @@ void displayRentedCars(const vector<Car> &RentedCars) {
 
 void displaySubscribers(const vector<Subscriber> &subscribers) {
 
-	cout << "List of Subscribers::" << endl;
+	cout << "List of Subscribers:" << endl;
 	/*for (const auto &Subscriber : subscribers) {
 		cout << "Name " << Subscriber.getName() << ", Subscription level    : "
 				<< CarRentalSystem::levelToString(Subscriber.getLevel())
@@ -33,7 +33,7 @@ void displaySubscribers(const vector<Subscriber> &subscribers) {
 	for (auto it = subscribers.begin(); it != subscribers.end(); ++it) {
 			//if (it->getID() == id) {
 				//std::cout << "Subscriber removed successfully:" << std::endl;
-				std::cout<<"tes"<<endl;
+				//std::cout<<"tes"<<endl;
 				std::cout << "Name: " << it->getName() << std::endl;
 				std::cout << "ID: " << it->getID() << std::endl;
 				//std::cout << "Subscription Level: " << levelToString(it->getLevel())<< std::endl;
